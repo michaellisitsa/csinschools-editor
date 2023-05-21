@@ -12,8 +12,10 @@ A minimal list of implementations are added so most Intro To Coding scripts will
 
 # Set up Formatter & VS Code
 
-- You can install `black` via provided requirements.txt, however to prevent `label .xxx` and `goto .xxx` having whitespace stripped sff ` # fmt: skip`.
-- Set your default formatter to black for this folder.
+- You can install `black` via provided requirements.txt.
+- If using VS Code:
+  - Set your default formatter to black for this workspace.
+  - Install extension [Regex Replace on Save](https://marketplace.visualstudio.com/items?itemName=CryptoCooLby.vscode-regex-replace-on-save&ssr=false#overviewto) to prevent `label .xxx` and `goto .xxx` having whitespace stripped off ` # fmt: skip`.
 
 # ENVIRONMENT
 

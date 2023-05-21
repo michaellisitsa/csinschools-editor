@@ -1,0 +1,23 @@
+{
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "python.formatting.provider": "none",
+  // Require Extension
+  // Regex Replace on Save
+  // https://marketplace.visualstudio.com/items?itemName=CryptoCooLby.vscode-regex-replace-on-save&ssr=false#overview
+  "regexReplaceOnSave.ruleSets": {
+    "py": {
+      "Add comment to prevent black formatting": {
+        "find": "(label|goto)\\s*(\\.[a-zA-Z_]+)",
+        "replace": "$1 $2 # fmt: skip"
+      },
+      "Remove duplicate comments": {
+        // If comment is already present, remove duplicate
+        // Undoubtedly there is a better way to exclude this
+        "find": "#(\\s+)fmt: skip\\s+# fmt: skip",
+        "replace": "#$1fmt: skip"
+      }
+    }
+  }
+}
